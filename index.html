@@ -901,7 +901,7 @@
                         <span>San Francisco, CA</span>
                     </div>
                 </div>
-                <form class="contact-form" action="https://formspree.io/f/myzdvprq" method="POST">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/myzdvprq" method="POST">
                     <input type="hidden" name="_next" value="https://otterarts.com/thank-you.html">
                     <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio">
                     <input type="hidden" name="_captcha" value="false">
@@ -962,12 +962,17 @@
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         });
 
-        // Contact form handling - now handled by Formspree
-        const contactForm = document.querySelector('.contact-form');
+        // Contact form handling
+        const contactForm = document.querySelector('#contactForm');
         contactForm.addEventListener('submit', function(e) {
-            // Form will be submitted to Formspree service
-            // No need to prevent default or show alert
-            // Formspree will handle the submission and redirect
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Let Formspree handle the submission naturally
+            // The _next parameter should redirect to thank-you page
         });
 
         // Add animation on scroll
