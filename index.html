@@ -269,9 +269,119 @@
             color: var(--text-secondary);
         }
 
+        /* Timeline Section */
+        .timeline {
+            background: var(--bg-secondary);
+        }
+
+        .timeline-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: -3rem;
+            width: 2px;
+            background: var(--primary-color);
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 0.5rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .timeline-icon i {
+            font-size: 0.5rem;
+            color: white;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            left: -1rem;
+            top: 1.5rem;
+            width: 0;
+            height: 0;
+            border-top: 1rem solid transparent;
+            border-bottom: 1rem solid transparent;
+            border-right: 1rem solid white;
+        }
+
+        .timeline-date {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .timeline-description ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-description li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
         /* Projects Section */
         .projects {
-            background: var(--bg-secondary);
+            background: var(--bg-primary);
         }
 
         .projects-grid {
@@ -457,6 +567,25 @@
             .cta-buttons {
                 justify-content: center;
             }
+
+            .timeline-item {
+                padding-left: 2rem;
+            }
+
+            .timeline-item::before {
+                left: 0.5rem;
+            }
+
+            .timeline-icon {
+                left: 0;
+                width: 0.75rem;
+                height: 0.75rem;
+            }
+
+            .timeline-content::before {
+                left: -0.75rem;
+                border-right-width: 0.75rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -504,6 +633,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -592,6 +722,109 @@
                     </div>
                     <h3>Mobile & Tools</h3>
                     <p>React Native, Flutter, Figma, VS Code</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section timeline">
+        <div class="container">
+            <h2 class="section-title">Career Timeline</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - Present</div>
+                        <div class="timeline-title">Senior Full Stack Developer</div>
+                        <div class="timeline-company">Tech Innovations Inc.</div>
+                        <div class="timeline-description">
+                            <p>Leading development of enterprise-scale web applications using modern technologies. Mentoring junior developers and driving technical architecture decisions.</p>
+                            <ul>
+                                <li>Architected microservices architecture serving 100K+ daily users</li>
+                                <li>Improved application performance by 40% through optimization</li>
+                                <li>Led team of 5 developers in agile development process</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2024</div>
+                        <div class="timeline-title">Full Stack Developer</div>
+                        <div class="timeline-company">Digital Solutions LLC</div>
+                        <div class="timeline-description">
+                            <p>Developed and maintained full-stack web applications using React, Node.js, and PostgreSQL. Collaborated with cross-functional teams to deliver high-quality software solutions.</p>
+                            <ul>
+                                <li>Built responsive web applications with React and TypeScript</li>
+                                <li>Designed and implemented RESTful APIs with Node.js</li>
+                                <li>Collaborated with UX/UI designers to create intuitive interfaces</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - 2022</div>
+                        <div class="timeline-title">Frontend Developer</div>
+                        <div class="timeline-company">WebCraft Studios</div>
+                        <div class="timeline-description">
+                            <p>Specialized in creating engaging user interfaces and implementing responsive designs. Worked closely with backend teams to integrate frontend components.</p>
+                            <ul>
+                                <li>Developed pixel-perfect UI components using React and CSS3</li>
+                                <li>Implemented responsive designs for mobile and desktop</li>
+                                <li>Optimized frontend performance and accessibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020 - 2021</div>
+                        <div class="timeline-title">Software Engineering Bootcamp</div>
+                        <div class="timeline-company">Tech Academy</div>
+                        <div class="timeline-description">
+                            <p>Intensive full-stack development program covering modern web technologies, software engineering principles, and industry best practices.</p>
+                            <ul>
+                                <li>Mastered JavaScript, HTML5, CSS3, and modern frameworks</li>
+                                <li>Completed 15+ projects including full-stack applications</li>
+                                <li>Learned agile development methodologies and version control</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2016 - 2020</div>
+                        <div class="timeline-title">Bachelor of Computer Science</div>
+                        <div class="timeline-company">University of Technology</div>
+                        <div class="timeline-description">
+                            <p>Comprehensive study of computer science fundamentals, algorithms, data structures, and software engineering principles.</p>
+                            <ul>
+                                <li>Graduated Magna Cum Laude with 3.8 GPA</li>
+                                <li>Completed capstone project in machine learning</li>
+                                <li>Active member of Computer Science Student Association</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
