@@ -902,7 +902,6 @@
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm" action="https://formspree.io/f/myzdvprq" method="POST">
-                    <input type="hidden" name="_next" value="https://otterarts.com/thank-you.html">
                     <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio">
                     <input type="hidden" name="_captcha" value="false">
                     <div class="form-group">
@@ -971,8 +970,8 @@
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
             
-            // Let Formspree handle the submission naturally
-            // The _next parameter should redirect to thank-you page
+            // Let Formspree handle the submission and redirect
+            // Redirect behavior can be managed in Formspree dashboard
         });
 
         // Add animation on scroll
