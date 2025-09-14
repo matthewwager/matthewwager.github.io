@@ -1,0 +1,108 @@
+/* Design Token Demo - Shows how to use design tokens in components */
+
+.design-token-demo {
+  /* Use design tokens for padding and background */
+  padding: var(--spacing-8);
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-light);
+  max-width: 800px;
+  margin: var(--spacing-8) auto;
+}
+
+.design-token-demo h1 {
+  /* Typography tokens are automatically applied via design-tokens.css */
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-4);
+}
+
+.design-token-demo h2 {
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-3);
+}
+
+.design-token-demo p {
+  margin-bottom: var(--spacing-4);
+}
+
+.demo-section {
+  /* Use spacing tokens for consistent margins */
+  margin-bottom: var(--spacing-8);
+  padding: var(--spacing-6);
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+}
+
+.color-examples {
+  display: flex;
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.color-box {
+  padding: var(--spacing-4) var(--spacing-6);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-inverse);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  min-width: 120px;
+}
+
+.color-box.primary {
+  background-color: var(--color-primary);
+}
+
+.color-box.secondary {
+  background-color: var(--color-secondary);
+}
+
+.color-box.accent {
+  background-color: var(--color-accent);
+}
+
+.spacing-examples {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.spacing-demo {
+  padding: var(--spacing-4);
+  background-color: var(--color-bg-accent);
+  border-radius: var(--radius-base);
+  border-left: 4px solid var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.spacing-demo.small {
+  padding: var(--spacing-2) var(--spacing-4);
+}
+
+.spacing-demo.medium {
+  padding: var(--spacing-4) var(--spacing-6);
+}
+
+.spacing-demo.large {
+  padding: var(--spacing-6) var(--spacing-8);
+}
+
+/* Responsive design using design tokens */
+@media (max-width: 768px) {
+  .design-token-demo {
+    padding: var(--spacing-4);
+    margin: var(--spacing-4);
+  }
+  
+  .demo-section {
+    padding: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+  }
+  
+  .color-examples {
+    flex-direction: column;
+  }
+}
+
+
+/*# sourceMappingURL=stories-DesignTokenDemo-stories.90aee6e3.chunk.css.map*/
