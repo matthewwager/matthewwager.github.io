@@ -1,263 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matthew Wager - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>OtterArts - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-<nav>
-        <div class="nav-container">
-            <div class="logo">Matthew Wager</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
+    <!-- Fixed Background Image -->
+    <div class="background-image">
+        <img src="images/background-image.svg" alt="" aria-hidden="true">
+    </div>
+    
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="header-background"></div>
+        <nav class="navigation">
+            <a href="#home" class="navigation__brand">OtterArts</a>
+            <span class="navigation__divider"></span>
+            <ul class="navigation__links">
                 <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-  </ul>
-            <div class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-</nav>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content fade-in-up">
-                <h1>Hello, I'm Matthew</h1>
-                <div class="subtitle">Full Stack Developer</div>
-                <p>I create beautiful, functional websites and applications that solve real-world problems. Passionate about clean code and user experience.</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-code"></i>
-                        View My Work
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i>
-                        Get In Touch
-                    </a>
-                </div>
+        <div class="hero__container">
+            <div class="hero__image">
+            <div class="hero__headshot">
+                <img src="images/headshot.png" alt="Matthew Wager" class="hero__headshot-img">
             </div>
-            <div class="hero-image fade-in-up">
-                <div class="profile-placeholder">
-                    <i class="fas fa-user"></i>
+            </div>
+            <div class="hero__content">
+                <h1 class="hero__title">Hello, folks</h1>
+                <div class="hero__description">
+                    <p>I am a product designer with over 25 years of experience.</p>
+                    <p>I have focused on information design, data visualizations, and UI/UX design and design systems. I also like to illustrate and animate. I like otters. I like art.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate full-stack developer with a love for creating innovative solutions and beautiful user experiences. With expertise in modern web technologies, I bring ideas to life through clean, efficient code.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying outdoor adventures. I believe in continuous learning and staying up-to-date with the latest industry trends.</p>
-                    <p>I'm always excited to work on new projects and collaborate with amazing people. Let's build something great together!</p>
+    <!-- Career Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="section-divider-container">
+            <div class="section-divider">
+                <div class="section-divider__line"></div>
+                <h2 class="section-divider__title">Career Timeline</h2>
+                <div class="section-divider__line"></div>
+            </div>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-line">
+                        <div class="timeline-line__dot"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card__content">
+                            <div class="timeline-card__logo">
+                                <img src="images/logo-rippling.svg" alt="Rippling Logo" class="timeline-card__logo-img">
+                            </div>
+                            <h3 class="timeline-card__title">Lead Product Designer</h3>
+                            <p class="timeline-card__date">2021 – 2025</p>
+                            <p class="timeline-card__description">Job description</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-image">
-                    <div class="profile-placeholder">
-                        <i class="fas fa-laptop-code"></i>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-line">
+                        <div class="timeline-line__dot"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card__content">
+                            <div class="timeline-card__logo">
+                                <img src="images/logo-zenefits.svg" alt="Zenefits Logo" class="timeline-card__logo-img">
+                            </div>
+                            <h3 class="timeline-card__title">Principal Designer</h3>
+                            <p class="timeline-card__date">2021 – 2025</p>
+                            <p class="timeline-card__description">Job description</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-line">
+                        <div class="timeline-line__dot"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card__content">
+                            <div class="timeline-card__logo">
+                                <img src="images/logo-sigfig.svg" alt="SigFig Logo" class="timeline-card__logo-img">
+                            </div>
+                            <h3 class="timeline-card__title">Design Director</h3>
+                            <p class="timeline-card__date">2021 – 2025</p>
+                            <p class="timeline-card__description">Job description</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-line">
+                        <div class="timeline-line__dot"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card__content">
+                            <div class="timeline-card__logo">
+                                <img src="images/logo-zenefits.svg" alt="Zenefits Logo" class="timeline-card__logo-img">
+                            </div>
+                            <h3 class="timeline-card__title">Art Director</h3>
+                            <p class="timeline-card__date">2021 – 2025</p>
+                            <p class="timeline-card__description">Job description</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-line">
+                        <div class="timeline-line__dot"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card__content">
+                            <div class="timeline-card__logo">
+                                <img src="images/logo-sigfig.svg" alt="SigFig Logo" class="timeline-card__logo-img">
+                            </div>
+                            <h3 class="timeline-card__title">Design Director</h3>
+                            <p class="timeline-card__date">2021 – 2025</p>
+                            <p class="timeline-card__description">Job description</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item -->
+                <div class="timeline-item">
+                    <div class="timeline-line">
+                        <div class="timeline-line__dot"></div>
+                    </div>
+                    <div class="timeline-card timeline-card--center">
+                        <div class="timeline-card__content timeline-card__content--center">
+                            <div class="timeline-card__icon">
+                                <img src="images/icon-education.svg" alt="Education Icon" class="timeline-card__icon-img">
+                            </div>
+                            <h3 class="timeline-card__title">B.S. in Industrial Design</h3>
+                            <p class="timeline-card__date">1997</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h3>Frontend Development</h3>
-                    <p>HTML5, CSS3, JavaScript, React, Vue.js, TypeScript</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Backend Development</h3>
-                    <p>Node.js, Python, Express, Django, RESTful APIs</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Database & Cloud</h3>
-                    <p>MongoDB, PostgreSQL, AWS, Docker, Git</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Mobile & Tools</h3>
-                    <p>React Native, Flutter, Figma, VS Code</p>
-                </div>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="section-divider-container">
+            <div class="section-divider">
+                <div class="section-divider__line"></div>
+                <h2 class="section-divider__title">Testimonials</h2>
+                <div class="section-divider__line"></div>
             </div>
         </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section id="timeline" class="section timeline">
-        <div class="container">
-            <h2 class="section-title">Career Timeline</h2>
-            <div class="timeline-container">
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2024 - Present</div>
-                        <div class="timeline-title">Senior Full Stack Developer</div>
-                        <div class="timeline-company">Tech Innovations Inc.</div>
-                        <div class="timeline-description">
-                            <p>Leading development of enterprise-scale web applications using modern technologies. Mentoring junior developers and driving technical architecture decisions.</p>
-                            <ul>
-                                <li>Architected microservices architecture serving 100K+ daily users</li>
-                                <li>Improved application performance by 40% through optimization</li>
-                                <li>Led team of 5 developers in agile development process</li>
-                            </ul>
-                        </div>
-                    </div>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <h3 class="testimonial__title">Sets a high bar</h3>
+                <div class="testimonial__text">
+                    <p>"Matt consistently delivers high quality experiences that push the bar of what we think of as Rippling today, helping the whole of IT evolve. Matt's work has set the bar for how designers should work within IT — this includes bringing in a wealth of systems thinking, a</p>
+                    <p>drive to ruthlessly simplify experiences, and to push the limits of possible while balancing feasibility."</p>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2022 - 2024</div>
-                        <div class="timeline-title">Full Stack Developer</div>
-                        <div class="timeline-company">Digital Solutions LLC</div>
-                        <div class="timeline-description">
-                            <p>Developed and maintained full-stack web applications using React, Node.js, and PostgreSQL. Collaborated with cross-functional teams to deliver high-quality software solutions.</p>
-                            <ul>
-                                <li>Built responsive web applications with React and TypeScript</li>
-                                <li>Designed and implemented RESTful APIs with Node.js</li>
-                                <li>Collaborated with UX/UI designers to create intuitive interfaces</li>
-                            </ul>
-                        </div>
-                    </div>
+            </div>
+            <div class="testimonial">
+                <h3 class="testimonial__title">Sets a high bar</h3>
+                <div class="testimonial__text">
+                    <p>Matt is able to easily articulate his approach to show how his philosophy can be applied in a programmatic way and provide substantial input on what's needed to move projects forward. His use of visuals and storytelling has</p>
+                    <p>brought this to life, and sets an example for other designers."</p>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2021 - 2022</div>
-                        <div class="timeline-title">Frontend Developer</div>
-                        <div class="timeline-company">WebCraft Studios</div>
-                        <div class="timeline-description">
-                            <p>Specialized in creating engaging user interfaces and implementing responsive designs. Worked closely with backend teams to integrate frontend components.</p>
-                            <ul>
-                                <li>Developed pixel-perfect UI components using React and CSS3</li>
-                                <li>Implemented responsive designs for mobile and desktop</li>
-                                <li>Optimized frontend performance and accessibility</li>
-                            </ul>
-                        </div>
-                    </div>
+            </div>
+            <div class="testimonial">
+                <h3 class="testimonial__title">Mentorship</h3>
+                <div class="testimonial__text">
+                    <p>"Matt's able to come up with creative solutions/designs for even the most challenging problems and is able to often re-shape the problem when</p>
+                    <p>needed. There have been numerous times where we have run into a daunting product use case that we need to satisfy with designs and Matt has been the key element in shaping and often simplifying the product constraints themselves in a way where we are able to maintain an extremely</p>
+                    <p>consistent UX for users."</p>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2020 - 2021</div>
-                        <div class="timeline-title">Software Engineering Bootcamp</div>
-                        <div class="timeline-company">Tech Academy</div>
-                        <div class="timeline-description">
-                            <p>Intensive full-stack development program covering modern web technologies, software engineering principles, and industry best practices.</p>
-                            <ul>
-                                <li>Mastered JavaScript, HTML5, CSS3, and modern frameworks</li>
-                                <li>Completed 15+ projects including full-stack applications</li>
-                                <li>Learned agile development methodologies and version control</li>
-                            </ul>
-                        </div>
-  </div>
-  </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2016 - 2020</div>
-                        <div class="timeline-title">Bachelor of Computer Science</div>
-                        <div class="timeline-company">University of Technology</div>
-                        <div class="timeline-description">
-                            <p>Comprehensive study of computer science fundamentals, algorithms, data structures, and software engineering principles.</p>
-                            <ul>
-                                <li>Graduated Magna Cum Laude with 3.8 GPA</li>
-                                <li>Completed capstone project in machine learning</li>
-                                <li>Active member of Computer Science Student Association</li>
-                            </ul>
-                        </div>
-                    </div>
+            </div>
+            <div class="testimonial">
+                <h3 class="testimonial__title">Mentorship</h3>
+                <div class="testimonial__text">
+                    <p>"Almost to a one, Matt's peers admire and appreciate how generous he is with his time and how willing he is</p>
+                    <p>to help others. I hear over and over again something like, "Matt was really great at helping me do..." or "Matt</p>
+                    <p>was so helpful at teaching me about..." The junior designers relish his expertise and the senior designers appreciate his willingness to step in."</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+    <section id="projects" class="projects-section">
+        <div class="section-divider-container">
+            <div class="section-divider">
+                <div class="section-divider__line"></div>
+                <h2 class="section-divider__title">Example Projects</h2>
+                <div class="section-divider__line"></div>
+            </div>
+        </div>
+        <div class="projects-container">
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with React frontend, Node.js backend, and MongoDB database. Features include user authentication, payment processing, and admin dashboard.</p>
-                        <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
+                    <div class="project-card__image"></div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Project One</h3>
+                        <p class="project-card__category">OtterArts</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>A collaborative task management application built with Vue.js and Express. Real-time updates, drag-and-drop functionality, and team collaboration features.</p>
-                        <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
+                    <div class="project-card__image"></div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Project One</h3>
+                        <p class="project-card__category">OtterArts</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-images"></i>
+                    <div class="project-card__image"></div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Project One</h3>
+                        <p class="project-card__category">OtterArts</p>
                     </div>
-                    <div class="project-content">
-                        <h3>Interactive Photo Gallery</h3>
-                        <p>Beautiful image gallery with carousel presentation, semi-transparent overlays, and responsive design. Features smooth transitions and touch-friendly navigation.</p>
-                        <div class="project-links">
-                            <a href="gallery.html"><i class="fas fa-external-link-alt"></i> View Gallery</a>
-                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card__image"></div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Project One</h3>
+                        <p class="project-card__category">OtterArts</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card__image"></div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Project One</h3>
+                        <p class="project-card__category">OtterArts</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card__image"></div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Project One</h3>
+                        <p class="project-card__category">OtterArts</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card__image"></div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Project One</h3>
+                        <p class="project-card__category">OtterArts</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card__image"></div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Project One</h3>
+                        <p class="project-card__category">OtterArts</p>
                     </div>
                 </div>
             </div>
@@ -265,62 +276,34 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's work together!</h3>
-                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>Contact me through the form below</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>Available upon request</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>San Francisco, CA</span>
-                    </div>
-                </div>
+    <section id="contact" class="contact-section">
+        <div class="section-divider-container">
+            <div class="section-divider">
+                <div class="section-divider__line"></div>
+                <h2 class="section-divider__title">Contact Me</h2>
+                <div class="section-divider__line"></div>
+            </div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-form-wrapper">
+                <p class="contact-intro">I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
                 <form class="contact-form" id="contactForm" action="https://formspree.io/f/myzdvprq" method="POST">
                     <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio">
                     <input type="hidden" name="_captcha" value="false">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-  </div>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Message
-                    </button>
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
                 </form>
-  </div>
-</div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
-            <p>&copy; 2024 Matthew Wager. All rights reserved.</p>
         </div>
-    </footer>
+    </section>
 
     <script>
         // Smooth scrolling for navigation links
@@ -337,44 +320,13 @@
             });
         });
 
-        // Mobile menu toggle
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenu.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
-
         // Contact form handling
         const contactForm = document.querySelector('#contactForm');
         contactForm.addEventListener('submit', function(e) {
-            // Show loading state
             const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
-            
-            // Let Formspree handle the submission and redirect
-            // Redirect behavior can be managed in Formspree dashboard
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
         });
     </script>
 </body>
