@@ -224,7 +224,7 @@ body {
 
 /* Timeline Section */
 .timeline-section {
-    padding: 0;
+    padding: 24px;
     position: relative;
     z-index: 2;
 }
@@ -471,7 +471,7 @@ body {
 
 /* Contact Section */
 .contact-section {
-    padding: 16px;
+    padding: 24px;
     position: relative;
     z-index: 2;
 }
