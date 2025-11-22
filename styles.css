@@ -227,6 +227,7 @@ body {
     padding: 24px;
     position: relative;
     z-index: 2;
+    scroll-margin-top: 120px;
 }
 
 .timeline-container {
@@ -388,6 +389,7 @@ body {
     backdrop-filter: blur(32px);
     position: relative;
     z-index: 2;
+    scroll-margin-top: 120px;
 }
 
 .testimonials-container {
@@ -435,6 +437,7 @@ body {
     padding: 24px;
     position: relative;
     z-index: 2;
+    scroll-margin-top: 120px;
 }
 
 .projects-container {
@@ -495,6 +498,7 @@ body {
     padding: 24px;
     position: relative;
     z-index: 2;
+    scroll-margin-top: 120px;
 }
 
 .contact-container {
