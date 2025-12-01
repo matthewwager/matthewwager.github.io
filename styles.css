@@ -378,6 +378,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    line-height: 20px;
     color: var(--color-text-secondary);
     margin: 0;
 }
@@ -455,7 +456,7 @@ body {
 
 .project-card {
     width: 316px;
-    height: 205px;
+    min-height: 205px;
     background: var(--color-white);
     border-radius: 16px;
     box-shadow: var(--shadow-card);
@@ -479,8 +480,9 @@ body {
 }
 
 .project-card__image {
-    flex: 1;
+    flex-shrink: 0;
     background: linear-gradient(to right, var(--color-beige-light), var(--color-beige-dark));
+    height: 120px;
     min-height: 120px;
 }
 
@@ -503,6 +505,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    line-height: 1.5;
     color: var(--color-text-secondary);
     margin: 0;
 }
