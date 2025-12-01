@@ -54,21 +54,31 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
 
         .slide__background {
             z-index: 1;
-            background: #333333;
+            background: #000000;
         }
 
         .slide__middleground {
             z-index: 2;
-            background: #666666;
+            background: transparent;
         }
 
         .slide__foreground {
             z-index: 3;
-            background: #999999;
+            background: transparent;
+        }
+
+        .slide__background img,
+        .slide__middleground img,
+        .slide__foreground img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
         }
 
         .slide__placeholder {
@@ -280,13 +290,13 @@
             <!-- Slide 2 -->
             <div class="slide">
                 <div class="slide__background">
-                    <div class="slide__placeholder">Background</div>
+                    <img src="chile-dogs/images/background_01.svg" alt="Background">
                 </div>
                 <div class="slide__middleground">
-                    <div class="slide__placeholder">Middleground</div>
+                    <img src="chile-dogs/images/middleground_01.svg" alt="Middleground">
                 </div>
                 <div class="slide__foreground">
-                    <div class="slide__placeholder">Foreground</div>
+                    <img src="chile-dogs/images/foreground_01.svg" alt="Foreground">
                 </div>
                 <div class="slide__caption slide__caption--top-left">
                     Caption: Slide 2 - Top Left
