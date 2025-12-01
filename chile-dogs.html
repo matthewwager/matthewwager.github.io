@@ -87,11 +87,9 @@
             position: fixed;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(8px);
-            border: none;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.4);
             color: var(--color-white);
-            font-size: 32px;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -101,12 +99,21 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
-            opacity: 0.7;
+            opacity: 0.4;
+            padding: 0;
         }
 
-        .slideshow-nav:hover {
+        .slideshow-nav:hover,
+        .slideshow-nav:active {
             opacity: 1;
-            background: rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 1);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .slideshow-nav svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
         }
 
         .slideshow-nav--prev {
@@ -218,8 +225,16 @@
         </div>
 
         <!-- Navigation Buttons -->
-        <button class="slideshow-nav slideshow-nav--prev" id="prevBtn" aria-label="Previous slide">‹</button>
-        <button class="slideshow-nav slideshow-nav--next" id="nextBtn" aria-label="Next slide">›</button>
+        <button class="slideshow-nav slideshow-nav--prev" id="prevBtn" aria-label="Previous slide">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <button class="slideshow-nav slideshow-nav--next" id="nextBtn" aria-label="Next slide">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
 
         <!-- Slide Indicator -->
         <div class="slide-indicator" id="slideIndicator"></div>
