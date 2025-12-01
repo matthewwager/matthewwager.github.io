@@ -45,7 +45,7 @@
             justify-content: center;
             position: relative;
             cursor: pointer;
-            padding: 120px 24px 64px;
+            padding: 48px 24px;
         }
 
         .slide__content {
@@ -155,22 +155,6 @@
             opacity: 0.7;
         }
 
-        /* Hide default navigation when using header */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1001;
-            pointer-events: none;
-        }
-
-        .header * {
-            pointer-events: auto;
-        }
-
-        .navigation {
-            opacity: 0.9;
-        }
 
         @media (max-width: 768px) {
             .slideshow-nav {
@@ -207,21 +191,6 @@
     <div class="background-image">
         <img src="images/background-image.svg" alt="" aria-hidden="true">
     </div>
-    
-    <!-- Header/Navigation -->
-    <header class="header">
-        <div class="header-background"></div>
-        <nav class="navigation">
-            <a href="index.html#home" class="navigation__brand">OtterArts</a>
-            <span class="navigation__divider"></span>
-            <ul class="navigation__links">
-                <li><a href="index.html#timeline">Timeline</a></li>
-                <li><a href="index.html#testimonials">Testimonials</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <div class="slideshow-container">
         <div class="slideshow-wrapper" id="slideshowWrapper">
