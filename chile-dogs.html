@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chile Dogs - OtterArts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-page {
+            padding: 120px 24px 64px;
+            max-width: 1408px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .project-page__header {
+            margin-bottom: 48px;
+        }
+        
+        .project-page__title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 48px;
+            color: var(--color-white);
+            margin: 0 0 16px 0;
+            text-shadow: rgba(0, 0, 0, 0.25) 0px 1px 7px;
+        }
+        
+        .project-page__description {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 32px;
+            color: var(--color-white);
+            text-shadow: rgba(0, 0, 0, 0.25) 0px 1px 7px;
+            margin: 0;
+        }
+        
+        .project-page__content {
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(16px);
+            border-radius: 28px;
+            padding: 48px;
+            margin-top: 32px;
+        }
+        
+        .project-page__placeholder {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            color: var(--color-white);
+            text-align: center;
+            padding: 64px 32px;
+        }
+        
+        .project-page__back-link {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: var(--color-white);
+            text-decoration: none;
+            margin-bottom: 32px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-page__back-link:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Background Image -->
+    <div class="background-image">
+        <img src="images/background-image.svg" alt="" aria-hidden="true">
+    </div>
+    
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="header-background"></div>
+        <nav class="navigation">
+            <a href="index.html#home" class="navigation__brand">OtterArts</a>
+            <span class="navigation__divider"></span>
+            <ul class="navigation__links">
+                <li><a href="index.html#timeline">Timeline</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-page">
+        <a href="index.html#projects" class="project-page__back-link">← Back to Projects</a>
+        
+        <div class="project-page__header">
+            <h1 class="project-page__title">Chile Dogs</h1>
+            <p class="project-page__description">Online graphic novel about the street dogs of Valparaiso, written and illustrated by me.</p>
+        </div>
+        
+        <div class="project-page__content">
+            <div class="project-page__placeholder">
+                <p>This page is coming soon. Content will be added here.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
