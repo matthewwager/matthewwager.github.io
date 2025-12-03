@@ -86,13 +86,13 @@
             animation: fadeIn 0.6s ease-in-out 0.5s forwards;
         }
 
-        /* Initial animation only when slide becomes active and first caption */
-        .slide.active .slide__caption[data-caption-index="0"].active {
+        /* Initial animation only triggers when slide first becomes active */
+        .slide.active[data-just-activated] .slide__caption[data-caption-index="0"].active {
             animation: fadeIn 0.6s ease-in-out 0.7s forwards;
         }
 
-        /* For caption changes within the same slide, use transition only */
-        .slide.active .slide__caption[data-caption-index].active:not([data-caption-index="0"]) {
+        /* For caption changes within the same slide, use transition only (no animation) */
+        .slide.active .slide__caption[data-caption-index].active {
             animation: none;
         }
 
@@ -462,28 +462,29 @@
                 captions.forEach((caption, index) => {
                     if (index === currentCaptionIndex) {
                         caption.classList.add('active');
-                        // Reset animation to allow re-trigger if needed
-                        caption.style.animation = 'none';
-                        // Force reflow to reset animation
-                        void caption.offsetWidth;
-                        // Only apply animation for first caption on slide activation
-                        if (index === 0) {
-                            caption.style.animation = '';
-                        }
                     } else {
                         caption.classList.remove('active');
-                        caption.style.animation = 'none';
                     }
                 });
             }
 
             // Update slide position
             function updateSlidePosition() {
-                // Remove active class from all slides
-                slides.forEach(slide => slide.classList.remove('active'));
+                // Remove active class and activation flag from all slides
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                    slide.removeAttribute('data-just-activated');
+                });
                 
-                // Add active class to current slide to trigger animations
-                slides[currentSlide].classList.add('active');
+                // Add active class and activation flag to current slide to trigger initial animations
+                const currentSlideElement = slides[currentSlide];
+                currentSlideElement.classList.add('active');
+                currentSlideElement.setAttribute('data-just-activated', 'true');
+                
+                // Remove activation flag after animation completes
+                setTimeout(() => {
+                    currentSlideElement.removeAttribute('data-just-activated');
+                }, 1500); // After all animations complete (0.7s delay + 0.6s duration + buffer)
                 
                 wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
                 updateIndicators();
