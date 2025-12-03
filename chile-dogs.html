@@ -126,6 +126,34 @@
             letter-spacing: 1px;
         }
 
+        .slide__title-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .slide__main-title {
+            font-family: 'Protest Riot', sans-serif;
+            font-weight: 400;
+            font-size: 72px;
+            color: var(--color-white);
+            margin: 0 0 24px 0;
+            text-shadow: rgba(0, 0, 0, 0.25) 0px 1px 7px;
+        }
+
+        .slide__attribution {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: var(--color-white);
+            margin: 0;
+            opacity: 0.8;
+            text-shadow: rgba(0, 0, 0, 0.25) 0px 1px 7px;
+        }
+
         .slide__caption {
             position: absolute;
             z-index: 4;
@@ -279,6 +307,14 @@
                 font-size: 14px;
             }
 
+            .slide__main-title {
+                font-size: 48px;
+            }
+
+            .slide__attribution {
+                font-size: 16px;
+            }
+
             .slide__background img,
             .slide__middleground img,
             .slide__foreground img {
@@ -305,19 +341,11 @@
 
     <div class="slideshow-container">
         <div class="slideshow-wrapper" id="slideshowWrapper">
-            <!-- Slide 1 -->
+            <!-- Slide 1 - Title Slide -->
             <div class="slide">
-                <div class="slide__background">
-                    <div class="slide__placeholder">Background</div>
-                </div>
-                <div class="slide__middleground">
-                    <div class="slide__placeholder">Middleground</div>
-                </div>
-                <div class="slide__foreground">
-                    <div class="slide__placeholder">Foreground</div>
-                </div>
-                <div class="slide__caption slide__caption--bottom-center" data-caption-index="0">
-                    Caption: Online graphic novel about the street dogs of Valparaiso, written and illustrated by me.
+                <div class="slide__title-container">
+                    <h1 class="slide__main-title">Chile Dogs</h1>
+                    <p class="slide__attribution">Written and illustrated by Matt W</p>
                 </div>
             </div>
 
@@ -435,6 +463,8 @@
 
             // Get all captions for a slide
             function getCaptions(slideIndex) {
+                // Skip title slide (slide 0)
+                if (slideIndex === 0) return [];
                 return slides[slideIndex].querySelectorAll('[data-caption-index]');
             }
 
