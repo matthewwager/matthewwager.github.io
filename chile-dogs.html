@@ -134,6 +134,19 @@
             color: var(--color-white);
             max-width: 400px;
             opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        /* Hide all captions by default */
+        .slide__caption[data-caption-index] {
+            opacity: 0;
+            display: block;
+        }
+
+        /* Show active caption */
+        .slide__caption[data-caption-index].active {
+            opacity: 1;
         }
 
         /* Caption position variants */
@@ -297,7 +310,7 @@
                 <div class="slide__foreground">
                     <div class="slide__placeholder">Foreground</div>
                 </div>
-                <div class="slide__caption slide__caption--bottom-center">
+                <div class="slide__caption slide__caption--bottom-center" data-caption-index="0">
                     Caption: Online graphic novel about the street dogs of Valparaiso, written and illustrated by me.
                 </div>
             </div>
@@ -313,8 +326,14 @@
                 <div class="slide__foreground">
                     <img src="chile-dogs/images/foreground_03.svg" alt="Foreground">
                 </div>
-                <div class="slide__caption slide__caption--top-left">
-                    As they reached the clearing, she brought her opening number to a rousing conclusion. Dozens of dogs gathered, drawn by her voice, while uniformed men installing loudspeakers and placards nearby scowled at the performance. Their heckles, however, were drowned out by the enthusiastic howls of the growing audience.<br><br>Violeta sang well past dusk, her melodies carrying into twilight. She closed with familiar anthems, and the assembled dogs barked and howled their appreciation. As the applause lingered, Violeta spotted Pablo among the crowd. Knowing his gift for words, she motioned for silence and invited him to recite a poem.
+                <div class="slide__caption slide__caption--top-left" data-caption-index="0">
+                    As they reached the clearing, she brought her opening number to a rousing conclusion. Dozens of dogs gathered, drawn by her voice, while uniformed men installing loudspeakers and placards nearby scowled at the performance.
+                </div>
+                <div class="slide__caption slide__caption--top-left" data-caption-index="1">
+                    Their heckles, however, were drowned out by the enthusiastic howls of the growing audience. Violeta sang well past dusk, her melodies carrying into twilight.
+                </div>
+                <div class="slide__caption slide__caption--top-left" data-caption-index="2">
+                    She closed with familiar anthems, and the assembled dogs barked and howled their appreciation. As the applause lingered, Violeta spotted Pablo among the crowd. Knowing his gift for words, she motioned for silence and invited him to recite a poem.
                 </div>
             </div>
 
@@ -329,12 +348,18 @@
                 <div class="slide__foreground">
                     <img src="chile-dogs/images/foreground_00.svg" alt="Foreground">
                 </div>
-                <div class="slide__caption slide__caption--top-left">
-                    Pablo hesitated at first, but the rising chorus of pleas coaxed him forward. He began softly, his voice weaving through the night air. He spoke of the kind-hearted people of Valparaíso, then his tone deepened as he lamented the growing harassment from the uniformed men and the troubling disappearance of many friends. His words swelled into a powerful refrain, one familiar to all:<br><br>Joyful, joyful, joyful,<br>as only dogs know how to be happy<br>with only the autonomy<br>of our shameless spirit!
+                <div class="slide__caption slide__caption--top-left" data-caption-index="0">
+                    Pablo hesitated at first, but the rising chorus of pleas coaxed him forward. He began softly, his voice weaving through the night air.
+                </div>
+                <div class="slide__caption slide__caption--top-left" data-caption-index="1">
+                    He spoke of the kind-hearted people of Valparaíso, then his tone deepened as he lamented the growing harassment from the uniformed men and the troubling disappearance of many friends.
+                </div>
+                <div class="slide__caption slide__caption--top-left" data-caption-index="2">
+                    His words swelled into a powerful refrain, one familiar to all:<br><br>Joyful, joyful, joyful,<br>as only dogs know how to be happy<br>with only the autonomy<br>of our shameless spirit!
                 </div>
             </div>
 
-            <!-- Slide 3 -->
+            <!-- Slide 4 -->
             <div class="slide">
                 <div class="slide__background">
                     <img src="chile-dogs/images/background_01.svg" alt="Background">
@@ -345,8 +370,14 @@
                 <div class="slide__foreground">
                     <img src="chile-dogs/images/foreground_01.svg" alt="Foreground">
                 </div>
-                <div class="slide__caption slide__caption--top-right">
-                    After the applause faded, the crowd broke into murmuring conversations that stretched late into the night. One by one, the dogs succumbed to sleep, curling together for warmth beneath a sky ablaze with stars. Below, the city lights flickered out, leaving only the soft glow of the heavens.
+                <div class="slide__caption slide__caption--top-right" data-caption-index="0">
+                    After the applause faded, the crowd broke into murmuring conversations that stretched late into the night.
+                </div>
+                <div class="slide__caption slide__caption--top-right" data-caption-index="1">
+                    One by one, the dogs succumbed to sleep, curling together for warmth beneath a sky ablaze with stars.
+                </div>
+                <div class="slide__caption slide__caption--top-right" data-caption-index="2">
+                    Below, the city lights flickered out, leaving only the soft glow of the heavens.
                 </div>
             </div>
 
@@ -392,17 +423,44 @@
             const slideIndicator = document.getElementById('slideIndicator');
             
             let currentSlide = 0;
+            let currentCaptionIndex = 0;
             let isScrolling = false;
             let scrollTimeout;
+
+            // Get all captions for a slide
+            function getCaptions(slideIndex) {
+                return slides[slideIndex].querySelectorAll('[data-caption-index]');
+            }
+
+            // Get count of captions for a slide
+            function getCaptionCount(slideIndex) {
+                return getCaptions(slideIndex).length || 1; // Default to 1 if no captions
+            }
 
             // Initialize slide indicators
             slides.forEach((_, index) => {
                 const dot = document.createElement('div');
                 dot.className = 'slide-indicator__dot';
                 if (index === 0) dot.classList.add('slide-indicator__dot--active');
-                dot.addEventListener('click', () => goToSlide(index));
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                    currentCaptionIndex = 0; // Reset caption index when jumping to slide
+                    updateCaptions();
+                });
                 slideIndicator.appendChild(dot);
             });
+
+            // Update caption visibility
+            function updateCaptions() {
+                const captions = getCaptions(currentSlide);
+                captions.forEach((caption, index) => {
+                    if (index === currentCaptionIndex) {
+                        caption.classList.add('active');
+                    } else {
+                        caption.classList.remove('active');
+                    }
+                });
+            }
 
             // Update slide position
             function updateSlidePosition() {
@@ -414,6 +472,7 @@
                 
                 wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
                 updateIndicators();
+                updateCaptions();
             }
 
             // Update indicators
@@ -433,21 +492,39 @@
                 if (index < 0) index = 0;
                 if (index >= slides.length) index = slides.length - 1;
                 currentSlide = index;
+                currentCaptionIndex = 0; // Reset to first caption when jumping to slide
                 updateSlidePosition();
             }
 
-            // Next slide
+            // Next slide or caption
             function nextSlide() {
-                if (currentSlide < slides.length - 1) {
+                const captionCount = getCaptionCount(currentSlide);
+                
+                // If there are more captions on this slide, advance caption
+                if (currentCaptionIndex < captionCount - 1) {
+                    currentCaptionIndex++;
+                    updateCaptions();
+                } 
+                // Otherwise, advance to next slide
+                else if (currentSlide < slides.length - 1) {
                     currentSlide++;
+                    currentCaptionIndex = 0;
                     updateSlidePosition();
                 }
             }
 
-            // Previous slide
+            // Previous slide or caption
             function prevSlide() {
-                if (currentSlide > 0) {
+                // If not at first caption, go to previous caption
+                if (currentCaptionIndex > 0) {
+                    currentCaptionIndex--;
+                    updateCaptions();
+                } 
+                // Otherwise, go to previous slide's last caption
+                else if (currentSlide > 0) {
                     currentSlide--;
+                    const captionCount = getCaptionCount(currentSlide);
+                    currentCaptionIndex = Math.max(0, captionCount - 1);
                     updateSlidePosition();
                 }
             }
@@ -545,6 +622,7 @@
             // Initialize
             // Set first slide as active on load
             slides[0].classList.add('active');
+            currentCaptionIndex = 0;
             updateSlidePosition();
         })();
     </script>
