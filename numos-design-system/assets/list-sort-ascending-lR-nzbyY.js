@@ -1,0 +1,6 @@
+import{c as t}from"./createLucideIcon-CB-0TapI.js";import"./index-ClcD9ViR.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./Icon-BeLLTQTu.js";/**
+ * @license lucide-react v1.31.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const o=[["path",{d:"M3 19h18",key:"awlh7x"}],["path",{d:"M15 12H3",key:"6jk70r"}],["path",{d:"M9 5H3",key:"15j2za"}]],c=t("list-sort-ascending",o);export{o as __iconNode,c as default};

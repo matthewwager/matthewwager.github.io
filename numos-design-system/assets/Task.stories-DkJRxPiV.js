@@ -1,0 +1,30 @@
+import{j as e}from"./jsx-runtime-BYYWji4R.js";import{r as F}from"./index-ClcD9ViR.js";import{at as t,au as N}from"./DiagramConnector-DY1AhLDR.js";import"./index-Brl4xq4Y.js";const O={title:"Components/Task",component:t,parameters:{layout:"padded"}},o={width:"22rem",maxWidth:"100%"},s={render:()=>e.jsx("div",{style:o,children:e.jsx(t,{state:"disabled",title:"Verify sales tax remittance",description:"Confirm against filed returns",meta:"Locked"})})},a={name:"Not started",render:()=>e.jsx("div",{style:o,children:e.jsx(t,{state:"notStarted",title:"Reconcile merchant processor fees",description:"Match processor statements to recorded fee expense",meta:"Due in 5d",actionLabel:"Start",onAction:()=>alert("Start clicked")})})},i={name:"In progress",render:()=>e.jsx("div",{style:o,children:e.jsx(t,{state:"inProgress",title:"Audit expense report receipts",description:"Spot-check receipts over $500 for policy compliance",meta:"3 of 4 done",actionLabel:"Continue",onAction:()=>alert("Continue clicked")})})},n={render:()=>e.jsx("div",{style:o,children:e.jsx(t,{state:"overdue",title:"Investigate unmatched wire transfer",description:"Trace a $12,400 wire with no matching invoice",meta:"1d overdue!",actionLabel:"Start",onAction:()=>alert("Start clicked")})})},c={render:()=>e.jsx("div",{style:o,children:e.jsx(t,{state:"complete",title:"Match Stripe payouts to bank deposits",description:"January settlement batch reconciliation",meta:"3d ago",actionLabel:"Review",onAction:()=>alert("Review clicked")})})},d={render:()=>e.jsx("div",{style:o,children:e.jsx(t,{state:"error",title:"Reconcile payroll tax withholdings",description:"Verify Q4 withholding matches the filed 941",meta:"Due in 5d",actionLabel:"Fix",onAction:()=>alert("Fix clicked")})})},M=[{title:"Connect your bank account",description:"Link at least one account to start importing transactions"},{title:"Invite your team",description:"Add teammates so work can be assigned and reviewed"},{title:"Set your close calendar",description:"Choose which day each month the books close"},{title:"Review your chart of accounts",description:"Confirm accounts map correctly before the first close"}];function $(){const[m,V]=F.useState(0);function D(r){return r<m?"complete":r===m?"notStarted":"disabled"}return e.jsx("div",{style:{width:"26rem",maxWidth:"100%"},children:e.jsx(N,{title:"Get set up",description:"Finish these steps to start closing your books with Numos.",children:M.map((r,W)=>{const p=D(W);return e.jsx(t,{state:p,title:r.title,description:r.description,meta:p==="complete"?"Done":p==="disabled"?"Locked":void 0,actionLabel:p==="notStarted"?"Start":void 0,onAction:()=>V(Y=>Y+1)},r.title)})})})}const l={name:"TaskList — sequential onboarding steps",render:()=>e.jsx($,{})};var u,h,v;s.parameters={...s.parameters,docs:{...(u=s.parameters)==null?void 0:u.docs,source:{originalSource:`{
+  render: () => <div style={PREVIEW_STYLE}>
+      <Task state="disabled" title="Verify sales tax remittance" description="Confirm against filed returns" meta="Locked" />
+    </div>
+}`,...(v=(h=s.parameters)==null?void 0:h.docs)==null?void 0:v.source}}};var S,k,y;a.parameters={...a.parameters,docs:{...(S=a.parameters)==null?void 0:S.docs,source:{originalSource:`{
+  name: "Not started",
+  render: () => <div style={PREVIEW_STYLE}>
+      <Task state="notStarted" title="Reconcile merchant processor fees" description="Match processor statements to recorded fee expense" meta="Due in 5d" actionLabel="Start" onAction={() => alert("Start clicked")} />
+    </div>
+}`,...(y=(k=a.parameters)==null?void 0:k.docs)==null?void 0:y.source}}};var f,x,g;i.parameters={...i.parameters,docs:{...(f=i.parameters)==null?void 0:f.docs,source:{originalSource:`{
+  name: "In progress",
+  render: () => <div style={PREVIEW_STYLE}>
+      <Task state="inProgress" title="Audit expense report receipts" description="Spot-check receipts over $500 for policy compliance" meta="3 of 4 done" actionLabel="Continue" onAction={() => alert("Continue clicked")} />
+    </div>
+}`,...(g=(x=i.parameters)==null?void 0:x.docs)==null?void 0:g.source}}};var b,L,E;n.parameters={...n.parameters,docs:{...(b=n.parameters)==null?void 0:b.docs,source:{originalSource:`{
+  render: () => <div style={PREVIEW_STYLE}>
+      <Task state="overdue" title="Investigate unmatched wire transfer" description="Trace a $12,400 wire with no matching invoice" meta="1d overdue!" actionLabel="Start" onAction={() => alert("Start clicked")} />
+    </div>
+}`,...(E=(L=n.parameters)==null?void 0:L.docs)==null?void 0:E.source}}};var T,w,j;c.parameters={...c.parameters,docs:{...(T=c.parameters)==null?void 0:T.docs,source:{originalSource:`{
+  render: () => <div style={PREVIEW_STYLE}>
+      <Task state="complete" title="Match Stripe payouts to bank deposits" description="January settlement batch reconciliation" meta="3d ago" actionLabel="Review" onAction={() => alert("Review clicked")} />
+    </div>
+}`,...(j=(w=c.parameters)==null?void 0:w.docs)==null?void 0:j.source}}};var R,I,A;d.parameters={...d.parameters,docs:{...(R=d.parameters)==null?void 0:R.docs,source:{originalSource:`{
+  render: () => <div style={PREVIEW_STYLE}>
+      <Task state="error" title="Reconcile payroll tax withholdings" description="Verify Q4 withholding matches the filed 941" meta="Due in 5d" actionLabel="Fix" onAction={() => alert("Fix clicked")} />
+    </div>
+}`,...(A=(I=d.parameters)==null?void 0:I.docs)==null?void 0:A.source}}};var C,P,_;l.parameters={...l.parameters,docs:{...(C=l.parameters)==null?void 0:C.docs,source:{originalSource:`{
+  name: "TaskList — sequential onboarding steps",
+  render: () => <TaskListDemo />
+}`,...(_=(P=l.parameters)==null?void 0:P.docs)==null?void 0:_.source}}};const q=["Disabled","NotStarted","InProgress","Overdue","Complete","Error","List"],B=Object.freeze(Object.defineProperty({__proto__:null,Complete:c,Disabled:s,Error:d,InProgress:i,List:l,NotStarted:a,Overdue:n,__namedExportsOrder:q,default:O},Symbol.toStringTag,{value:"Module"}));export{c as C,s as D,d as E,i as I,l as L,a as N,n as O,B as T};

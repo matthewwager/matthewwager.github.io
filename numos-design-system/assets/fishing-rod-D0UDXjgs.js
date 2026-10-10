@@ -1,0 +1,6 @@
+import{c as i}from"./createLucideIcon-CB-0TapI.js";import"./index-ClcD9ViR.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./Icon-BeLLTQTu.js";/**
+ * @license lucide-react v1.31.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const o=[["path",{d:"M4 11h1",key:"13eipc"}],["path",{d:"M8 15a2 2 0 0 1-4 0V3a1 1 0 0 1 1-1h.5C14 2 20 9 20 18v4",key:"1hs3im"}],["circle",{cx:"18",cy:"18",r:"2",key:"1emm8v"}]],a=i("fishing-rod",o);export{o as __iconNode,a as default};
