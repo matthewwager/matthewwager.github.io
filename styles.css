@@ -759,8 +759,11 @@ body {
 }
 
 @media (max-width: 480px) {
+    /* Only as wide as the icon, so the divider and links sit right after it
+       instead of being pushed to the right edge. */
     .navigation__brand {
         display: flex;
+        flex: none;
         align-items: center;
     }
 
