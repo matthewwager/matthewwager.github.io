@@ -96,6 +96,14 @@ body {
     opacity: 0.8;
 }
 
+/* Home icon that stands in for the "OtterArts" wordmark on narrow screens
+   (see the 480px breakpoint), so the section links fit on one line. */
+.navigation__brand-icon {
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+
 .navigation__divider {
     display: none;
 }
@@ -751,6 +759,25 @@ body {
 }
 
 @media (max-width: 480px) {
+    .navigation__brand {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Visually hidden, but still the link's accessible name. */
+    .navigation__brand-text {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+
+    .navigation__brand-icon {
+        display: block;
+    }
+
     .hero__title {
         font-size: 32px;
     }
@@ -767,4 +794,30 @@ body {
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Narrowest phones: tighten the nav so all four section links stay on one
+   line next to the home icon. */
+@media (max-width: 400px) {
+    .header {
+        padding: 12px;
+    }
+
+    .navigation {
+        padding: 12px;
+    }
+
+    .navigation__links {
+        gap: 6px;
+    }
+
+    .navigation__links li a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 340px) {
+    .navigation__links li a {
+        font-size: 12px;
+    }
 }
