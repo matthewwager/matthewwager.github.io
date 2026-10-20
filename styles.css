@@ -514,6 +514,15 @@ body {
     box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.12);
 }
 
+/* A project without a presentation yet: shown, but not clickable, so it
+   doesn't lift on hover like the linked cards. Make it an <a> with an
+   href once the presentation exists. */
+.project-card--upcoming:hover,
+.project-card--upcoming:active {
+    transform: none;
+    box-shadow: var(--shadow-card);
+}
+
 .project-card__image {
     flex-shrink: 0;
     background: linear-gradient(to right, var(--color-beige-light), var(--color-beige-dark));
