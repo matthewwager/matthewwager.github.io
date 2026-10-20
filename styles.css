@@ -312,9 +312,11 @@ body {
     flex: 1;
 }
 
+/* The education card: its icon stays centered, but its header uses the
+   same full-width row as the job cards (title left, date right). */
 .timeline-card__content--center {
     align-items: center;
-    padding: 16px 64px;
+    padding: 16px;
 }
 
 .timeline-card__content--center .timeline-card__header {
