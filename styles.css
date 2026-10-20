@@ -335,6 +335,17 @@ body {
     object-fit: contain;
 }
 
+/* A company with no logo file: its name, set to sit in the same 24px row
+   as the image logos. */
+.timeline-card__logo-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: var(--color-text-primary);
+}
+
 .timeline-card__icon {
     width: 48px;
     height: 48px;
@@ -353,7 +364,9 @@ body {
 .timeline-card__header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* Baseline, so the date lines up with the title's first line when a
+       long title wraps. */
+    align-items: baseline;
     gap: 16px;
     width: 100%;
 }
@@ -367,6 +380,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 16px;
+    line-height: 1.3;
     color: var(--color-text-primary);
     margin: 0;
     flex: 1;
