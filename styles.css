@@ -249,19 +249,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 575px;
-    gap: 32px;
     position: relative;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    background: var(--color-white);
-    z-index: 0;
 }
 
 .timeline-item {
@@ -273,12 +261,35 @@ body {
     z-index: 1;
 }
 
+/* The connector between cards: a line segment, the dot, another segment.
+   Each segment stops 2px short of the dot, and both are the same length,
+   so the dot sits exactly midway between the cards above and below it. */
 .timeline-line {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-bottom: 16px;
+}
+
+.timeline-line::before,
+.timeline-line::after {
+    content: '';
+    width: 2px;
+    height: 22px;
+    background: var(--color-white);
+}
+
+.timeline-line::before {
+    margin-bottom: 2px;
+}
+
+.timeline-line::after {
+    margin-top: 2px;
+}
+
+/* No line above the first dot — the timeline starts there. */
+.timeline-item:first-child .timeline-line::before {
+    display: none;
 }
 
 .timeline-line__dot {
